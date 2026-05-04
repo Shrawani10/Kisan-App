@@ -1,0 +1,39 @@
+{
+  "name": "kisan-backend",
+  "version": "2.0.0",
+  "description": "Kisan Chat - Vercel Serverless Backend with Azure AI Foundry Agent",
+  "type": "module",
+  "main": "api/chat.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "start": "node api/chat.js",
+    "test": "node --test tests/**/*.test.js",
+    "lint": "eslint api/ --fix"
+  },
+  "dependencies": {
+    "@azure/ai-projects": "^0.15.0",
+    "@azure/identity": "^4.0.0",
+    "@supabase/supabase-js": "^2.49.8",
+    "jose": "^5.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.1"
+  },
+  "keywords": [
+    "kisan",
+    "farming",
+    "ai",
+    "foundry-agent",
+    "azure",
+    "vercel",
+    "serverless"
+  ],
+  "author": "",
+  "license": "MIT"
+}

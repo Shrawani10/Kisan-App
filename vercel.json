@@ -1,0 +1,26 @@
+{
+  "buildCommand": "npm install",
+  "env": {
+    "AZURE_SEARCH_ENDPOINT": "@azure_search_endpoint",
+    "AZURE_SEARCH_KEY": "@azure_search_key",
+    "AZURE_OPENAI_ENDPOINT": "@azure_openai_endpoint",
+    "AZURE_OPENAI_KEY": "@azure_openai_key",
+    "ANTHROPIC_API_KEY": "@anthropic_api_key",
+    "SUPABASE_JWT_SECRET": "@supabase_jwt_secret",
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs18.x",
+      "memory": 512,
+      "maxDuration": 30
+    }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://your-frontend-url.vercel.app",
+      "permanent": false
+    }
+  ]
+}
