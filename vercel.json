@@ -1,26 +1,17 @@
 {
-  "buildCommand": "npm install",
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/dist",
   "env": {
-    "AZURE_SEARCH_ENDPOINT": "@azure_search_endpoint",
-    "AZURE_SEARCH_KEY": "@azure_search_key",
-    "AZURE_OPENAI_ENDPOINT": "@azure_openai_endpoint",
-    "AZURE_OPENAI_KEY": "@azure_openai_key",
-    "ANTHROPIC_API_KEY": "@anthropic_api_key",
-    "SUPABASE_JWT_SECRET": "@supabase_jwt_secret",
-    "NODE_ENV": "production"
+    "VITE_SUPABASE_URL": "@vite_supabase_url",
+    "VITE_SUPABASE_ANON_KEY": "@vite_supabase_anon_key",
+    "VITE_API_BASE_URL": "@vite_api_base_url",
+    "VITE_BACKEND_URL": "@vite_backend_url"
   },
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs18.x",
-      "memory": 512,
-      "maxDuration": 30
-    }
-  },
-  "redirects": [
+  "cleanUrls": true,
+  "rewrites": [
     {
-      "source": "/",
-      "destination": "https://your-frontend-url.vercel.app",
-      "permanent": false
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
