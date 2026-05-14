@@ -15,8 +15,8 @@
     "lint": "eslint api/ --fix"
   },
   "dependencies": {
-    "@azure/ai-projects": "^0.15.0",
-    "@azure/identity": "^4.0.0",
+    "@azure/ai-projects": "latest",
+    "@azure/identity": "latest",
     "@supabase/supabase-js": "^2.49.8",
     "jose": "^5.4.1"
   },
